@@ -1,6 +1,41 @@
+[tool.poetry]
+name = "marketholidays"
+version = "0.11.0"
+description = ""
+authors = ["Micheal Omojola <https://github.com/OmoMicheal>"]
+readme = "README.md"
+packages = [{include = "marketholidays"}]
+
+[tool.poetry.dependencies]
+python-dateutil = "*"
+six = "*"
+convertdate = ">=2.3.0"
+korean_lunar_calendar = "*"
+hijri_converter = "*"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+flake8 = "*"
+pre-commit = "^3.1.1"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+coverage = "^7.2.1"
+pytest = "^7.2.2"
+pytest-cov = "4.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.black]
 line-length = 79
-target-version = ['py36', 'py37', 'py38']
+target-version = ['py36', 'py37', 'py38', 'py39', 'py310', 'py311']
 exclude = '''
 /(
     \.eggs
