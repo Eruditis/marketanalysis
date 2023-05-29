@@ -1,17 +1,21 @@
 [tool.poetry]
-name = "marketholidays"
-version = "0.11.0"
-description = ""
-authors = ["Micheal Omojola <https://github.com/OmoMicheal>"]
-readme = "README.md"
-packages = [{include = "marketholidays"}]
+name = "marketanalysis"
+version = "0.1"
+description = "A repository for market holidays and trading days in NYSE and NASDAQ"
+authors = ["Micheal Omojola <momojola@aust.edu.ng>"]
+license = "MIT License"
+readme = "README.rst"
 
 [tool.poetry.dependencies]
+convertdate = ">=2.3.0"
+datetime = "*"
+hijri_converter = "*"
+korean_lunar_calendar = "*"
+python = ">=3.8,<4.0"
 python-dateutil = "*"
 six = "*"
-convertdate = ">=2.3.0"
-korean_lunar_calendar = "*"
-hijri_converter = "*"
+pip = ">=19.2.3"
+wheel = ">=0.33.6"
 
 [tool.poetry.group.dev]
 optional = true
@@ -30,7 +34,7 @@ pytest = "^7.2.2"
 pytest-cov = "4.0.0"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.black]
